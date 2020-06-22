@@ -1,5 +1,6 @@
 package br.com.datarich.investordata.models;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,15 +20,16 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
+@Builder
 public class User extends BaseEntity{
 
-    public User(Long id, String name, String surname, String email, Long phone) {
-        super(id);
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.phone = phone;
-    }
+//    public User(Long id, String name, String surname, String email, Long phone) {
+//        super(id);
+//        this.name = name;
+//        this.surname = surname;
+//        this.email = email;
+//        this.phone = phone;
+//    }
 
     @Column(name = "name")
     private String name;
@@ -40,4 +42,6 @@ public class User extends BaseEntity{
 
     @Column(name = "phone")
     private Long phone;
+
+    //TODO Add reference to Trade
 }
