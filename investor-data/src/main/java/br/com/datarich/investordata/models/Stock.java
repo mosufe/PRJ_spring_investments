@@ -18,7 +18,6 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Entity
 @Table(name = "stocks")
-@Builder
 public class Stock extends BaseEntity{
 
     @Column(name = "code")

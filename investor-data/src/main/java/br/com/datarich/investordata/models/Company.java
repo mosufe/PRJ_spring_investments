@@ -20,7 +20,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "companies")
-@Builder
 public class Company extends BaseEntity{
 
     @Column(name = "brand")

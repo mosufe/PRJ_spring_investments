@@ -12,10 +12,10 @@ import java.util.Optional;
  */
 public interface CompanyRepository extends CrudRepository<Company, Long> {
 
-    Optional<Company> findByCountry();
-    Optional<Company> findBySector();
-    Optional<Company> findByCategory();
-    Optional<Company> findBySize();
+    //Optional<Company> findByCountry();
+    //Optional<Company> findBySector();
+    //Optional<Company> findByCategory();
+    //Optional<Company> findBySize();
 
     //TODO Implement additional finds
 }

@@ -15,9 +15,9 @@ import java.util.Optional;
 public interface TradeRepository extends CrudRepository<Trade, Long> {
 
     //TODO finish findByStock implementation
-    Optional<Trade> findByStock();
+    //Optional<Trade> findByStock();
 
-    Optional<Trade> findByUser(User user);
+    //Optional<Trade> findByUser(User user);
 
-    Optional<Trade> findByDate(ZonedDateTime time);
+    //Optional<Trade> findByDate(ZonedDateTime time);
 }

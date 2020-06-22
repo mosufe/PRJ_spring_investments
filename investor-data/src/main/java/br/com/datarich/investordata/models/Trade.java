@@ -19,7 +19,6 @@ import java.time.ZonedDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "trades")
-@Builder
 public class Trade extends BaseEntity{
 
     @Column(name = "price")

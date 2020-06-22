@@ -20,7 +20,6 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-@Builder
 public class User extends BaseEntity{
 
 //    public User(Long id, String name, String surname, String email, Long phone) {
