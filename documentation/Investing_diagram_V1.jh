@@ -1,0 +1,75 @@
+entity User {
+	name String
+    surname String
+    email String
+    phone Integer
+}
+
+entity Company{
+	brand String
+    fantazyName String
+    website String
+    logo ImageBlob
+    marketValue Long
+    listedEmployees Long
+    foundation Date
+    ipo Date
+    tagAlong String
+    segment String
+    freeFloat Decimal
+}
+
+entity Stock{
+	code String
+    yield Decimal
+}
+
+entity HistoricalData{
+	price Long
+    time ZoneDateTime
+}
+
+entity Trade{
+	price Long
+    time ZoneDateTime
+}
+
+enum StockCategory{
+	STOCK, FII, TREASURE, REIT, FUND, ETF
+}
+
+relationship ManyToOne{
+	User{Trade} to Trade
+    Stock{StockCategory} to StockCategory 
+}
+relationship OneToMany{
+	Trade{Stock} to Stock
+}
+
+enum Sector{
+	BANKING, AIRLINE, TOURISM
+}
+
+enum StockType{
+	COMMON, PREFERRED, SHARECLASS
+}
+
+enum CompanySize{
+	LARGECAP, MIDCAP, SMALLCAP, MICROCAP
+}
+
+enum Origin{
+	BRAZIL, USA, EUROPE
+}
+
+relationship ManyToOne{
+	Company{Size} to CompanySize
+    Company{BusinessSector} to Sector
+    Company{OriginalCountry} to Origin
+    Stock{StockType} to StockType
+}
+
+relationship OneToMany{
+	Company{Stock} to Stock
+    Stock{HistoricalData} to HistoricalData
+}
