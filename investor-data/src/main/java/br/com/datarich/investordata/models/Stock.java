@@ -10,6 +10,7 @@ import javax.persistence.*;
  * Created by Guilherme Jacome de Paula
  * Date 22/06/2020
  * Time 15:25
+ *
  */
 
 @Getter
