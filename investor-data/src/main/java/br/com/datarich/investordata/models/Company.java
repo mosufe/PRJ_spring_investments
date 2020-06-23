@@ -8,6 +8,8 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.ZonedDateTime;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Guilherme Jacome de Paula
@@ -64,5 +66,8 @@ public class Company extends BaseEntity{
 
     @Enumerated(value = EnumType.STRING)
     private Sector sector;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "company")
+    private Set<Stock> stocks = new HashSet<>();
 
 }

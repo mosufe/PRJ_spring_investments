@@ -22,4 +22,5 @@ public class HistoricalData extends BaseEntity{
 
     @Column(name = "time")
     private ZonedDateTime time;
+
 }

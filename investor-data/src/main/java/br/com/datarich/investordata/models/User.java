@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Guilherme Jacome de Paula
@@ -44,5 +46,6 @@ public class User extends BaseEntity{
     @Enumerated(value = EnumType.STRING)
     private Origin country;
 
-    //TODO Add reference to Trade
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<Trade> trade = new HashSet<>();
 }

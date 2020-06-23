@@ -2,9 +2,7 @@ package br.com.datarich.investordata.models;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.ZonedDateTime;
 
 /**
@@ -30,7 +28,11 @@ public class Trade extends BaseEntity{
     @Column(name = "time")
     private ZonedDateTime time;
 
-    //TODO Add reference to Stock Entity
-    //TODO Add reference to User
+    @ManyToOne
+    private User user;
+
+    @ManyToOne
+    private Stock stock;
+
 }
 

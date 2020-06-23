@@ -3,8 +3,11 @@ package br.com.datarich.investordata.models;
 import br.com.datarich.investordata.models.enums.StockClassification;
 import br.com.datarich.investordata.models.enums.StockType;
 import lombok.*;
+import org.hibernate.engine.internal.Cascade;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Guilherme Jacome de Paula
@@ -32,10 +35,10 @@ public class Stock extends BaseEntity{
 
     @Enumerated(value = EnumType.STRING)
     private StockType stockType;
-    //TODO Add reference to Trade
-    //TODO Add reference to Company
-    //TODO Add reference to Enum StockCategory
-    //TODO Add reference to Enum StockType
-    //TODO Add reference to Company
-    //TODO Add reference to HistoricalData
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<HistoricalData> historicalData = new HashSet<>();
+
+    @ManyToOne
+    private Company company;
 }
