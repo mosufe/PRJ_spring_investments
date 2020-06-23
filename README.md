@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/mosufe/PRJ_spring_investments)
 # Spring investments tracker
 
 This is a concept project created with two simple objectives in mind
