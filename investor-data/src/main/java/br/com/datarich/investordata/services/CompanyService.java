@@ -1,4 +1,4 @@
-package br.com.datarich.investordata.services.jpa;
+package br.com.datarich.investordata.services;
 
 import br.com.datarich.investordata.models.Company;
 import br.com.datarich.investordata.services.CrudService;
