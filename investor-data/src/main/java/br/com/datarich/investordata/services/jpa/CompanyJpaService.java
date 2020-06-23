@@ -8,12 +8,14 @@ import br.com.datarich.investordata.models.enums.Origin;
 import br.com.datarich.investordata.models.enums.Sector;
 import br.com.datarich.investordata.repositories.CompanyRepository;
 import br.com.datarich.investordata.services.CompanyService;
+import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class CompanyJpaService implements CompanyService {
 
     private final CompanyRepository companyRepository;

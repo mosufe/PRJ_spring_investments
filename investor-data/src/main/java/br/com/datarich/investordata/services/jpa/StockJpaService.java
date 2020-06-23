@@ -4,10 +4,12 @@ import br.com.datarich.investordata.models.Stock;
 import br.com.datarich.investordata.models.User;
 import br.com.datarich.investordata.repositories.StockRepository;
 import br.com.datarich.investordata.services.StockService;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class StockJpaService implements StockService {
     private final StockRepository stockRepository;
 
