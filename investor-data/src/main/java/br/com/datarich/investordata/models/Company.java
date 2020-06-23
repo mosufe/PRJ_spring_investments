@@ -1,11 +1,11 @@
 package br.com.datarich.investordata.models;
 
+import br.com.datarich.investordata.models.enums.CompanySize;
+import br.com.datarich.investordata.models.enums.Origin;
+import br.com.datarich.investordata.models.enums.Sector;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Lob;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.ZonedDateTime;
 import java.util.Date;
 
@@ -55,5 +55,14 @@ public class Company extends BaseEntity{
 
     @Column(name = "free_float")
     private float freeFloat;
+
+    @Enumerated(value = EnumType.STRING)
+    private CompanySize companySize;
+
+    @Enumerated(value = EnumType.STRING)
+    private Origin origin;
+
+    @Enumerated(value = EnumType.STRING)
+    private Sector sector;
 
 }

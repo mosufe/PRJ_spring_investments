@@ -1,5 +1,5 @@
 package br.com.datarich.investordata.models.enums;
 
-public enum StockCategory {
+public enum StockClassification {
     STOCK, FII, TREASURE, REIT, FUND, ETF
 }
