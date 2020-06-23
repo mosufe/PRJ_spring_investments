@@ -5,6 +5,7 @@ import br.com.datarich.investordata.models.User;
 
 import java.time.ZonedDateTime;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Created by Guilherme Jacome de Paula
@@ -13,9 +14,9 @@ import java.util.Optional;
  */
 public interface TradeService extends CrudService<Trade, Long>{
     //TODO finish findByStock implementation
-    Optional<Trade> findByStock();
+    Set<Trade> findByStock(String code);
 
-    Optional<Trade> findByUser(User user);
+    Set<Trade> findByUser(String name);
 
-    Optional<Trade> findByDate(ZonedDateTime time);
+    Set<Trade> findByDate(ZonedDateTime time);
 }
