@@ -16,6 +16,7 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "trades")
 public class Trade extends BaseEntity{
 
@@ -29,9 +30,11 @@ public class Trade extends BaseEntity{
     private ZonedDateTime time;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
+    @JoinColumn(name = "stock_id")
     private Stock stock;
 
 }

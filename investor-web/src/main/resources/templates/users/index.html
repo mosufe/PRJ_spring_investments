@@ -7,19 +7,24 @@
 <body>
     <h2>Users Index Page!! Welcome!!</h2>
 
-    <table>
+    <table id="users-table">
         <thead>
             <tr>
-                <th>Teste 1</th>
-                <th>Teste 2</th>
-                <th>Teste 3</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Phone</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Valor 1</td>
-                <td>Valor 2</td>
-                <td>Valor 3</td>
+        <!--/*@thymesVar id="users" type="br.com.datarich.investordata.models.User"*/-->
+            <tr th:each="user : ${users}">
+                <td th:text="${user?.id}">1</td>
+                <td th:text="${user?.name}">2</td>
+                <td th:text="${user?.surname}">3</td>
+                <td th:text="${user?.email}">4</td>
+                <td th:text="${user?.phone}">5</td>
             </tr>
         </tbody>
     </table>

@@ -8,30 +8,13 @@
         <module>investor-data</module>
         <module>investor-web</module>
     </modules>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.1.RELEASE</version>
-        <relativePath/>
+        <relativePath /> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>br.com.datarich</groupId>
     <artifactId>investor</artifactId>
     <version>0.0.1-SNAPSHOT</version>

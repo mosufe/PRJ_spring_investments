@@ -1,9 +1,6 @@
 package br.com.datarich.investordata.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,13 +11,14 @@ import java.time.ZonedDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "historical_data")
 @Entity
+@Builder
+@Table(name = "historical")
 public class HistoricalData extends BaseEntity{
     @Column(name = "price")
     private Long price;
 
     @Column(name = "time")
     private ZonedDateTime time;
-
 }
+

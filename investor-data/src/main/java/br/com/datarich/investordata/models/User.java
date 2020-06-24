@@ -1,10 +1,7 @@
 package br.com.datarich.investordata.models;
 
 import br.com.datarich.investordata.models.enums.Origin;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -19,17 +16,19 @@ import java.util.Set;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "users")
 public class User extends BaseEntity{
 
-//    public User(Long id, String name, String surname, String email, Long phone) {
-//        super(id);
-//        this.name = name;
-//        this.surname = surname;
-//        this.email = email;
-//        this.phone = phone;
-//    }
+    public User(Long id, String name, String surname, String email, Long phone) {
+        super(id);
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+    }
 
     @Column(name = "name")
     private String name;

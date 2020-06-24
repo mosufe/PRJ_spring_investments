@@ -21,6 +21,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "stocks")
 public class Stock extends BaseEntity{
 
@@ -40,5 +41,6 @@ public class Stock extends BaseEntity{
     private Set<HistoricalData> historicalData = new HashSet<>();
 
     @ManyToOne
+    @JoinColumn(name = "company_id")
     private Company company;
 }
