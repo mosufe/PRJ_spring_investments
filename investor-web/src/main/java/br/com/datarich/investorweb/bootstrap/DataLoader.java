@@ -6,7 +6,7 @@ import br.com.datarich.investordata.repositories.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class DataLoader implements CommandLineRunner {
 
 
