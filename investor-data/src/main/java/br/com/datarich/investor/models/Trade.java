@@ -21,7 +21,7 @@ import java.time.ZonedDateTime;
 public class Trade extends BaseEntity{
 
     @Column(name = "price")
-    private Long price;
+    private Float price;
 
     @Column(name = "amount")
     private Long amount;

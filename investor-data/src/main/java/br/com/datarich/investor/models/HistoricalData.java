@@ -16,7 +16,7 @@ import java.time.ZonedDateTime;
 @Table(name = "historical")
 public class HistoricalData extends BaseEntity{
     @Column(name = "price")
-    private Long price;
+    private Float price;
 
     @Column(name = "time")
     private ZonedDateTime time;

@@ -53,9 +53,6 @@ public class Company extends BaseEntity{
     @Column(name = "tag_along")
     private String tagAlong;
 
-    @Column(name = "segment")
-    private String segment;
-
     @Column(name = "free_float")
     private float freeFloat;
 
