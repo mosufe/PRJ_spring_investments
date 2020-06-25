@@ -50,12 +50,6 @@ public class Company extends BaseEntity{
     @Column(name = "ipo")
     private Date ipo;
 
-    @Column(name = "tag_along")
-    private String tagAlong;
-
-    @Column(name = "free_float")
-    private float freeFloat;
-
     @Enumerated(value = EnumType.STRING)
     private CompanySize companySize;
 

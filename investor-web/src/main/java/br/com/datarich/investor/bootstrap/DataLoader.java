@@ -44,8 +44,6 @@ public class DataLoader implements CommandLineRunner {
         petrobras.setListedEmployees(62829L);
         petrobras.setFoundation(ZonedDateTime.now().minusYears(60));
         petrobras.setIpo(new Date());
-        petrobras.setTagAlong("80");
-        petrobras.setFreeFloat(30.0f);
         petrobras.setCompanySize(CompanySize.LARGECAP);
         petrobras.setOrigin(Origin.BRAZIL);
         petrobras.setSector(Sector.OIL);
@@ -59,8 +57,6 @@ public class DataLoader implements CommandLineRunner {
         itau.setListedEmployees(62829L);
         itau.setFoundation(ZonedDateTime.now().minusYears(50));
         itau.setIpo(new Date());
-        itau.setTagAlong("80");
-        itau.setFreeFloat(30.0f);
         itau.setCompanySize(CompanySize.LARGECAP);
         itau.setOrigin(Origin.BRAZIL);
         itau.setSector(Sector.FINANCIAL);
@@ -73,6 +69,8 @@ public class DataLoader implements CommandLineRunner {
         itub3.setCode("ITUB3");
         itub3.setCompany(persistedItau);
         itub3.setCurrentYield("1234");
+        itub3.setTagAlong("80");
+        itub3.setFreeFloat(30.0f);
         itub3.setStockClassification(StockClassification.STOCK);
         itub3.setStockType(StockType.COMMON);
 
@@ -80,6 +78,8 @@ public class DataLoader implements CommandLineRunner {
         petr4.setCode("PETR4");
         petr4.setCompany(persistedPetrobras);
         petr4.setCurrentYield("1234");
+        petr4.setTagAlong("80");
+        petr4.setFreeFloat(30.0f);
         petr4.setStockClassification(StockClassification.STOCK);
         petr4.setStockType(StockType.PREFERRED);
 
@@ -87,6 +87,8 @@ public class DataLoader implements CommandLineRunner {
         petr3.setCode("PETR3");
         petr3.setCompany(persistedPetrobras);
         petr3.setCurrentYield("1234");
+        petr3.setTagAlong("80");
+        petr3.setFreeFloat(30.0f);
         petr3.setStockClassification(StockClassification.STOCK);
         petr3.setStockType(StockType.COMMON);
 

@@ -7,20 +7,37 @@
 <body>
     <h2>Companies Index Page!! Welcome!!</h2>
 
-    <table>
+    <table id="stocks-table">
         <thead>
-            <tr>
-                <th>Teste 1</th>
-                <th>Teste 2</th>
-                <th>Teste 3</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Brand</th>
+            <th>Fantasy Name</th>
+            <th>Website</th>
+            <th>Market Value</th>
+            <th>Number of Employees</th>
+            <th>Foundation Date</th>
+            <th>IPO Release</th>
+            <th>Compaany Size</th>
+            <th>Origin</th>
+            <th>Sector</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Valor 1</td>
-                <td>Valor 2</td>
-                <td>Valor 3</td>
-            </tr>
+        <!--/*@thymesVar id="trades" type="br.com.datarich.investor.models.Trade"*/-->
+        <tr th:each="company : ${companies}">
+            <td th:text="${company?.id}">1</td>
+            <td th:text="${company?.brand}">2</td>
+            <td th:text="${company?.fantasyName}">3</td>
+            <td th:text="${company?.website}">4</td>
+            <td th:text="${company?.marketValue}">5</td>
+            <td th:text="${company?.listedEmployees}">6</td>
+            <td th:text="${company?.foundation}">7</td>
+            <td th:text="${company?.ipo}">8</td>
+            <td th:text="${company?.companySize}">9</td>
+            <td th:text="${company?.origin}">10</td>
+            <td th:text="${company?.sector}">11</td>
+        </tr>
         </tbody>
     </table>
 </body>

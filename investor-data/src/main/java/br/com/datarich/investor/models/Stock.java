@@ -36,6 +36,12 @@ public class Stock extends BaseEntity{
     @Enumerated(value = EnumType.STRING)
     private StockType stockType;
 
+    @Column(name = "tag_along")
+    private String tagAlong;
+
+    @Column(name = "free_float")
+    private float freeFloat;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "stock")
     private Set<HistoricalData> historicalData = new HashSet<>();
 
