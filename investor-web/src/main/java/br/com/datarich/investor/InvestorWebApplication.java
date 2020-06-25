@@ -11,5 +11,4 @@ public class InvestorWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(InvestorWebApplication.class, args);
 	}
-
 }

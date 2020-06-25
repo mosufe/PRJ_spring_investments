@@ -7,20 +7,27 @@
 <body>
     <h2>Trades Index Page!! Welcome!!</h2>
 
-    <table>
+    <table id="trades">
         <thead>
-            <tr>
-                <th>Teste 1</th>
-                <th>Teste 2</th>
-                <th>Teste 3</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Time</th>
+            <th>Stock Code</th>
+            <th>Buyer</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Valor 1</td>
-                <td>Valor 2</td>
-                <td>Valor 3</td>
-            </tr>
+        <!--/*@thymesVar id="trades" type="br.com.datarich.investor.models.Trade"*/-->
+        <tr th:each="trade : ${trades}">
+            <td th:text="${trade?.id}">1</td>
+            <td th:text="${trade?.amount}">2</td>
+            <td th:text="${trade?.price}">3</td>
+            <td th:text="${trade?.time}">4</td>
+            <td th:text="${trade?.stock.code}">5</td>
+            <td th:text="${trade?.user.name} + ' ' + ${trade?.user.surname}">6</td>
+        </tr>
         </tbody>
     </table>
 </body>
