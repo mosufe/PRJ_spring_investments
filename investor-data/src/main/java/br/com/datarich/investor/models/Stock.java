@@ -36,7 +36,7 @@ public class Stock extends BaseEntity{
     @Enumerated(value = EnumType.STRING)
     private StockType stockType;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "stock")
     private Set<HistoricalData> historicalData = new HashSet<>();
 
     @ManyToOne
