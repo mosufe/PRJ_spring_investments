@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-        <!--/*@thymesVar id="users" type="br.com.datarich.investordata.models.User"*/-->
+        <!--/*@thymesVar id="users" type="br.com.datarich.investor.models.User"*/-->
             <tr th:each="user : ${users}">
                 <td th:text="${user?.id}">1</td>
                 <td th:text="${user?.name}">2</td>
