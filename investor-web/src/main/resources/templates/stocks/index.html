@@ -7,20 +7,27 @@
 <body>
     <h2>Stocks Index Page!! Welcome!!</h2>
 
-    <table>
+    <table id="stocks-table">
         <thead>
-            <tr>
-                <th>Teste 1</th>
-                <th>Teste 2</th>
-                <th>Teste 3</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Stock code</th>
+            <th>Current Yield</th>
+            <th>Classification</th>
+            <th>Type</th>
+            <th>Company</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Valor 1</td>
-                <td>Valor 2</td>
-                <td>Valor 3</td>
-            </tr>
+        <!--/*@thymesVar id="trades" type="br.com.datarich.investor.models.Trade"*/-->
+        <tr th:each="stock : ${stocks}">
+            <td th:text="${stock?.id}">1</td>
+            <td th:text="${stock?.code}">2</td>
+            <td th:text="${stock?.currentYield}">3</td>
+            <td th:text="${stock?.stockClassification}">4</td>
+            <td th:text="${stock?.stockType}">5</td>
+            <td th:text="${stock?.company.brand}">6</td>
+        </tr>
         </tbody>
     </table>
 </body>
