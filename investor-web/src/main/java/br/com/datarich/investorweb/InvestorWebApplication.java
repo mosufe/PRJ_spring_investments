@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(scanBasePackages= {"br.com.datarich.investordata","br.com.datarich.investorweb" })
+@SpringBootApplication
 @EnableJpaRepositories("br.com.datarich.investordata")
 @EntityScan("br.com.datarich.investordata")
 public class InvestorWebApplication {
